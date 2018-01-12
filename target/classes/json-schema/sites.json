@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "description": "Sites model",
+    "type": "object",
+    "properties": {
+        "Sites": 
+		{ 
+			"type": "array", 
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"Id" : {
+						"type" : "integer"
+					},
+					"Name" : {
+						"type" : "string"
+					}
+				},
+				"additionalProperties" : false
+			}
+		}
+    },
+    "required": ["Sites"],
+	"dependencies": {
+		"Sites" : ["Id","Name"]
+	},
+	"additionalProperties" : false
+}
